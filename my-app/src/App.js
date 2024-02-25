@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import './App.css'
+import searchIcon from './search.svg'
 
 //4c15de18
 
@@ -18,10 +19,21 @@ const App = () => {
   useEffect(() => {
     searchMovies('avengers')
   }, [])
+
   return (
-    <h1>
-      Hello World
-    </h1>
+    <div className="app">
+      <h1>MovieLand</h1>
+
+      <div className='search'>
+        <input placeholder='Search for movies' value="Superman" onChange={() => {}}/>
+        <img 
+          src={searchIcon} 
+          alt='Search Icon'
+          onClick={() => {}}
+        />
+      </div>
+
+    </div>
   )
 }
 
